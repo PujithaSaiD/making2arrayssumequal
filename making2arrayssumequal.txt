@@ -1,0 +1,17 @@
+#making 2 arrays sum equal by swapping june5
+a=list(map(int,input().split()))
+b=list(map(int,input().split()))
+sumA=sum(a)
+sumB=sum(b)
+print(sumA)
+if (sumA-sumB)%2!=0:
+  print(-1)
+target=(sumA-sumB)//2
+setB=set(b)
+for x in a:
+  y=x-target
+  if y in setB:
+    print(1)
+    break
+  else:
+    print(-1)
